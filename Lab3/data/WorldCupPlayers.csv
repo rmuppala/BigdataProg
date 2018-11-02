@@ -1,4 +1,4 @@
-RoundID,MatchID,Team Initials,Coach Name,Line-up,Shirt Number,Player Name,Position,Event
+RoundID,MatchID,Team_Initials,Coach_Name,Line-up,Shirt_Number,Player_Name,Position,Event
 201,1096,FRA,CAUDRON Raoul (FRA),S,0,Alex THEPOT,GK,
 201,1096,MEX,LUQUE Juan (MEX),S,0,Oscar BONFIGLIO,GK,
 201,1096,FRA,CAUDRON Raoul (FRA),S,0,Marcel LANGILLER,,G40'
