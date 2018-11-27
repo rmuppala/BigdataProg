@@ -2,7 +2,7 @@
 import org.apache.spark.sql.SparkSession
 import org.graphframes.GraphFrame
 
-object SparkGraphFrame_Icp6 {
+object SparkGraphFrameICP6 {
   def main(args: Array[String]) {
     System.setProperty("hadoop.home.dir", "C:\\winutils")
     val spark = SparkSession
@@ -43,7 +43,13 @@ object SparkGraphFrame_Icp6 {
     //g.vertices.write.csv("data/ver")
     g.edges.write.csv("data/edge")
 
+    // bonus part
+    val lpa = g.labelPropagation.maxIter(5).run()
+    //lpa.show()
+    //lpa.select("id", "label").show()
 
+    val BFS = g.bfs.fromExpr("id = 'Japantown'").toExpr("dockcount<424").run()
+    BFS.show()
 
   }
 }
